@@ -11,7 +11,7 @@ A huge thanks to PilotJohn who originally created Throttle Manager 1.2.0. You ca
 This requires a registered copy of FSUIPC. Any version for FSX or P3D including v4 will work.
 
 ## Installation and Setup
-1. Depending on how many throttle levers you have, copy the appropriate `ThrottleManager.lua.*lev` file into the `Modules` folder.
+1. Depending on how many throttle levers you have, copy the appropriate `ThrottleManager.lua.*lev` file as `ThrottleManager.lua` into the `Modules` folder.
 	1. If you wish to have throttle toggle sounds, copy all the `.wav` files into the `Modules` folder.
 2. Edit the `FSUIPC*.ini` and add the following (where `X` is the next number in the sequence, or `1` if it's the first entry):
 	```
@@ -28,7 +28,7 @@ This requires a registered copy of FSUIPC. Any version for FSX or P3D including 
 	2. Select `Send direct to FSUIPC Calibration`
 	3. Check `Throttle N` where N is the lever number starting from 1.
 	4. Go to the `Joystick Calibration` tab.
-	5. On page `3 of 11: Separate throttles per engine`, check `No reverse Zone` and Set `Min` and `Max` for throttle N, where N is the lever number.
+	5. On page `3 of 11: Separate throttles per engine`, click `Set`, check `No reverse Zone` and Set `Min` and `Max` for throttle N, where N is the lever number.
 	6. **DO NOT** configure more throttles than you have, or check any of the `1->...` check boxes.
 
 ### Toggle Button Setup 
@@ -39,8 +39,9 @@ Depending on the amount of levers you have, you may want to have 1, 2, or even 4
 	2. Check `Select for FS control`
 	3. Choose `LuaToggle ThrottleManager`
 	4. Enter `N` for the `Parameter` where `N` is the number of the first reverser the button will toggle. For example, if you had 2 toggle buttons, the first toggle button would map to both 1 and 2, but we would input 1 initially, and the second toggle button would map to both 3 and 4, but we would input 3 initially.
-	5. Open `FSUIPC*.ini` and go to the `[Buttons]` section.
-	6. Find the lines with `-{LuaToggle ThrottleManger}-` and copy and paste them to cover all 4 reversers. \
+	5. Click OK to save the settings.
+	6. Open `FSUIPC*.ini` and go to the `[Buttons]` section.
+	7. Find the lines with `-{LuaToggle ThrottleManger}-` and copy and paste them to cover all N reversers. \
 	 An example is as follows for one toggle button:
     ```
     6=P0,11,CL3:T,1 	-{LuaToggle ThrottleManager}-
